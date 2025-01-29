@@ -1,6 +1,16 @@
 
-   // controllers/productController.js
 const productService = require('../services/productServices');
+
+// Ajouter plusieurs produits
+const addMultipleProducts = async (req, res) => {
+  const products = req.body.products; // Tableau de produits
+  try {
+    const createdProducts = await productService.addMultipleProducts(products);
+    res.status(201).json(createdProducts);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
 // Ajouter un produit
 const createProduct = async (req, res) => {
@@ -54,9 +64,9 @@ const deleteProduct = async (req, res) => {
 
 module.exports = {
   createProduct,
+  addMultipleProducts,
   getAllProducts,
   getProductById,
   updateProduct,
   deleteProduct
 };
-  

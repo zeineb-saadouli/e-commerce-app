@@ -1,0 +1,97 @@
+.cart-container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-list {
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-item-image-container {
+    text-align: center;
+    margin-bottom: 10px; /* Espacement entre l'image et le nom */
+  }
+  
+  .cart-item-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  
+  .cart-item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px; /* Espacement entre le nom et l'image */
+  }
+  
+  .cart-item-buttons {
+    display: flex;
+    justify-content: center; /* Centrer les boutons et la quantité */
+    align-items: center;     /* Centrer verticalement */
+    margin-bottom: 10px; /* Espacement entre les boutons et le reste */
+  }
+  .cart-item .btn-sm {
+    font-size: 1.25rem;  /* Agrandir la taille de la police pour les boutons */
+    padding: 8px 12px;   /* Augmenter légèrement le padding pour agrandir les boutons */
+  }
+  
+  .cart-item-quantity {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 5px; /* Espacement autour de la quantité */
+  }
+  
+  .cart-item-buttons button {
+    font-size: 0.75rem;  /* Réduire la taille de la police */
+    padding: 2px 6px;    /* Réduire le padding pour minimiser la longueur */
+    min-width: 20px;     /* Réduire la largeur minimale des boutons */
+    width: auto;         /* Laisser la largeur s'ajuster au contenu */
+  }
+  
+  .cart-summary {
+    padding: 15px;
+    border-top: 2px solid #dee2e6;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .cart-summary .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-summary .btn {
+    margin: 0 10px; /* Espacement entre les deux boutons */
+    padding: 10px 20px; /* Fixer le padding pour les boutons */
+    font-size: 1rem;  /* Assurer la même taille de texte */
+    text-align: center; /* Centrer le texte à l'intérieur du bouton */
+    width: 180px; /* Fixe la même largeur pour les deux boutons */
+    height: 60px; /* Fixe la même hauteur pour les deux boutons */
+  }
+  .cart-summary .btn-primary,
+  .cart-summary .btn-danger {
+    min-width: 180px;  /* S'assurer que les deux boutons ont la même largeur */
+    padding: 10px 20px; /* S'assurer que les deux boutons ont le même padding */
+    font-size: 1rem; /* S'assurer que les tailles de texte sont identiques */
+    display: inline-block; /* Assure que les boutons restent en ligne */
+  }
+  
+  .cart-summary button {
+    padding: 5px 10px;  /* Réduire le padding du bouton dans la section résumé */
+    font-size: 0.875rem; /* Ajuster la taille de la police pour le bouton de résumé */
+  }

@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useContext  } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { CartContext } from '../context/CartContext';
+import './ProductList.css';
+import { useCart } from '../context/CartContext';  // Importez 'useCart' au lieu de 'CartContext'
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  // const [confirmationMessage, setConfirmationMessage] = useState('');
   const navigate = useNavigate();
-  const { addToCart } = useContext(CartContext);
+  const { addToCart } = useCart();  // Utilisez 'useCart' pour accéder aux fonctions du panier
 
   useEffect(() => {
     axios
@@ -23,11 +23,11 @@ const ProductList = () => {
         setLoading(false);
       });
   }, []);
-  const handleAddToCart=(product)=>{
-    addToCart(product);
-    navigate('/cart')
-  }
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    navigate('/cart');
+  };
 
   if (loading) return <p>Chargement des produits...</p>;
   if (error) return <p>{error}</p>;

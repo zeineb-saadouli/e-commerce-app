@@ -9,6 +9,8 @@ import './App.css'
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import { CartProvider } from './context/CartContext';
+import Checkout from './components/Checkout';
+import Payment from './components/Payement';
 function App() {
     return (
       <CartProvider>
@@ -19,6 +21,9 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<ProductList />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/payment" element={<Payment/>} />
+
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<Register />} />
             </Routes>
